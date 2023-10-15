@@ -12,6 +12,7 @@ export default function App (){
     e.preventDefault()
     if(value.match(pattern)){
       setErrorState(false)
+      setValue('')
     } else{
       setErrorState(true)
     }
