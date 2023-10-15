@@ -818,16 +818,6 @@ footer{
 }
 
 
-/*.section4-3 span{
-  color: red;
-  font-size: 0.5rem;
-  position: relative;
-  top: 100px;
-  right: 200px;
-  margin: 0 auto;
-  margin-top: 0px;
-  margin-left: 0px;
-}*/
 
 .section4-3 span{
   color: red;
@@ -860,7 +850,7 @@ footer{
 
 
 .section4-3 button{
-  padding: 2% 3%;
+  padding: 3% 5%;
   border: none;
   background-color: hsl(12, 88%, 59%) ;
   color: white ;
