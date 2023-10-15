@@ -19,6 +19,7 @@ export default function App (){
 
   window.addEventListener("scroll", ()=>{
     setShowMenu(false)
+    setMenuIcon("/images/icon-hamburger.svg")
   })
 
   return<>
