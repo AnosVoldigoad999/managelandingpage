@@ -28,7 +28,9 @@ export default function App (){
   const [value, setValue] = useState("")
   const [errorState, setErrorState] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
-  const [menuIcon, setMenuIcon] = useState("/images/icon-hamburger.svg")
+  const menuLink = "/images/icon-hamburger.svg"
+  const cancelLink = "/images/icon-close.svg"
+  const [menuIcon, setMenuIcon] = useState(menuLink)
   function handleSubmit (e){
     e.preventDefault()
     if(value.match(pattern)){
@@ -41,7 +43,7 @@ export default function App (){
 
   window.addEventListener("scroll", ()=>{
     setShowMenu(false)
-    setMenuIcon("/images/icon-hamburger.svg")
+    setMenuIcon(menuLink)
   })
 
   
@@ -70,7 +72,7 @@ const CustomDots = ({
       <li>Community</li>
     </ul>
    </div>}
- <img src={menuIcon} alt="menu" className='menu' onClick={()=>{if(menuIcon==="/images/icon-hamburger.svg"){setMenuIcon("/images/icon-close.svg")}else{setMenuIcon("/images/icon-hamburger.svg")}; setShowMenu(!showMenu)}}/>
+ <img src={menuIcon} alt="menu" className='menu' onClick={()=>{if(menuIcon===menuLink){setMenuIcon(cancelLink)}else{setMenuIcon(menuLink)}; setShowMenu(!showMenu)}}/>
     <ul>
       <li>Pricing</li>
       <li>Product</li>
