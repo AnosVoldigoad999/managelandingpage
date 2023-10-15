@@ -7,6 +7,7 @@ export default function App (){
   const [value, setValue] = useState("")
   const [errorState, setErrorState] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
+  const [menuIcon, setMenuIcon] = useState("/images/icon-hamburger.svg")
   function handleSubmit (e){
     e.preventDefault()
     if(value.match(pattern)){
@@ -32,7 +33,7 @@ export default function App (){
       <li>Community</li>
     </ul>
    </div>}
- <img src="/images/icon-hamburger.svg" alt="menu" className='menu' onClick={()=>{setShowMenu(!showMenu)}} />
+ <img src={menuIcon} alt="menu" className='menu' onClick={()=>{setShowMenu(!showMenu); if(menuIcon==="/images/icon-hamburger.svg"){setMenuIcon("/images/icon-close.svg")}else{setMenuIcon("/images/icon-hamburger.svg")}}} />
     <ul>
       <li>Pricing</li>
       <li>Product</li>
