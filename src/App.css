@@ -398,6 +398,10 @@ nav ul li:hover{
   filter: opacity(50%);
 }
 
+main .section1 .des button:hover{
+  background-color: var(--palered);
+}
+
 button:hover{
   cursor: pointer;
   /*filter: opacity(70%);*/
