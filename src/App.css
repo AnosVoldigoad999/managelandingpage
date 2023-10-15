@@ -731,6 +731,7 @@ footer{
   justify-content: space-between;
   position: relative;
   left: -8px;
+  margin-bottom: -20px;
 }
 
 
