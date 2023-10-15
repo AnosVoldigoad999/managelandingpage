@@ -148,7 +148,7 @@ const CustomDots = ({
     </div>
     <footer>
       <div className="section4-1">
-      <p>Copyright 2020. All Rights Reserved</p>
+      <p>Copyright 2023. All Rights Reserved</p>
       <img src="/images/logo.svg" alt="logo" className='logo' />
       <div className="section4-1-1">
         <AiFillFacebook className='icon' />
@@ -177,7 +177,7 @@ const CustomDots = ({
         <button onClick={handleSubmit}>Go</button>
        </form>
        {errorState && <span>please input a valid email.</span>}
-       <p>Copyright 2020. All Rights Reserved</p>
+       <p>Copyright 2023. All Rights Reserved</p>
       </div>
     </footer>
   </main>
