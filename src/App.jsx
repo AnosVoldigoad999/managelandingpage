@@ -34,7 +34,7 @@ export default function App (){
       <li>Community</li>
     </ul>
    </div>}
- <img src={menuIcon} alt="menu" className='menu' onClick={()=>{setShowMenu(!showMenu); if(menuIcon==="/images/icon-hamburger.svg"){setMenuIcon("/images/icon-close.svg")}else{setMenuIcon("/images/icon-hamburger.svg")}}} />
+ <img src={menuIcon} alt="menu" className='menu' onClick={()=>{if(menuIcon==="/images/icon-hamburger.svg"){setMenuIcon("/images/icon-close.svg")}else{setMenuIcon("/images/icon-hamburger.svg")}; setShowMenu(!showMenu)}}/>
     <ul>
       <li>Pricing</li>
       <li>Product</li>
