@@ -575,11 +575,12 @@ main .section1 .illustration{
   color: hsl(228, 39%, 23%);
   background-color: hsl(13, 100%, 96%);
   padding: 10px 0;
-  margin-left: 11%;
+  font-size: 0.8rem;
 }
 
 .section2-1 ol p{
   color: hsl(227, 12%, 61%);
+  font-size: 0.7rem;
 }
 
 ol{
@@ -593,7 +594,7 @@ ol{
 
 .section2-1 li::before {
   position: relative;
-  top: 52px;
+  top: 45px;
   right: 49%;
   content: "0"counter(idk);
   counter-increment: idk;
@@ -690,17 +691,19 @@ ol{
   background-color: hsl(12, 88%, 59%);
   height: 40vh;
   margin-top: 300px;
-  width: 97vw;
+  width: 99vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 10px 0px;
   text-align: center;
+  position: relative;
+  left: -8px;
 }
 
 .section3 h1{
-font-size: 1.5rem;
+font-size: 1.2rem;
 }
 
 .section3 button{
@@ -720,11 +723,13 @@ footer{
   padding: 30px 0;
   background-color: hsl(233, 12%, 13%);
   display: flex;
-  width: 97vw;
+  width: 99vw;
   height: 100vh;
   align-items: center;
   flex-direction: column-reverse;
   justify-content: space-between;
+  position: relative;
+  left: -8px;
 }
 
 
