@@ -466,7 +466,7 @@ display: none;
     width: 5vw;
   }
 
- #checkbox:checked~.mobilemenu{
+ /*#checkbox:checked~*/.mobilemenu{
   position: fixed;
   display: flex;
   margin: 0 auto;
@@ -575,6 +575,7 @@ main .section1 .illustration{
   color: hsl(228, 39%, 23%);
   background-color: hsl(13, 100%, 96%);
   padding: 10px 0;
+  padding-left: 30px;
   font-size: 0.8rem;
 }
 

@@ -23,7 +23,6 @@ export default function App (){
   return<>
   <nav>
     <img src="/images/logo.svg" alt="logo" className="logo" />
-   <input type='checkbox' id='checkbox' />
    {showMenu && <div className="mobilemenu">
    <ul>
       <li>Pricing</li>
@@ -33,7 +32,7 @@ export default function App (){
       <li>Community</li>
     </ul>
    </div>}
-   <label htmlFor='checkbox'> <img src="/images/icon-hamburger.svg" alt="menu" className='menu' onClick={()=>{setShowMenu(!showMenu)}} /></label>
+ <img src="/images/icon-hamburger.svg" alt="menu" className='menu' onClick={()=>{setShowMenu(!showMenu)}} />
     <ul>
       <li>Pricing</li>
       <li>Product</li>
