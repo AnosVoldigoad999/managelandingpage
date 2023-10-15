@@ -186,30 +186,54 @@ ol{
   align-items: center;
 }
 
-.section2-2 .testimonials{
-  /*border: 1px solid red;*/
+.section2-2-1{
+  height: 60vh;
+  width: 100%;
+}
+
+
+
+/*.section2-2 .testimonials{
+  /*border: 1px solid red;*
   padding-top: 70px;
 display: grid;
 grid-template-columns: 32% 32% 32% 32%;
 column-gap: 40px;
 overflow-x: scroll;
+}*/
+
+
+
+.dot{
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 0 2px ;
+  border: 1px solid hsl(12, 88%, 59%)
 }
 
-
-
-
+.active-dot{
+  background-color: white;
+  padding: 5px;
+  margin: 0 2px ;
+  border-radius: 20px;
+  border: 1px solid hsl(12, 88%, 59%);
+  background-color: hsl(12, 88%, 59%);
+}
 
 .test{
   /*border: 1px solid red;*/
   background-color: hsl(0, 0%, 98%);
   overflow: visible;
+  margin:0 15px ;
+  padding-bottom: 20px;
 }
 
 .test .img{
   display: block;
   position: relative;
-  bottom: 20%;
- /* border: 1px solid red*/
+  bottom: 30px;
+
   width: 70px;
   height: 70px;
   margin: 0 auto;
@@ -231,7 +255,7 @@ overflow-x: scroll;
   display: none;
 }
 
-.section2-2 button{
+.section2-2 .button{
   padding: 15px 25px;
   border: none;
   background-color: hsl(12, 88%, 59%);

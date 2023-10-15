@@ -2,7 +2,28 @@ import './App.css'
 import {BsTwitter, BsPinterest, BsInstagram} from 'react-icons/bs'
 import {AiFillFacebook, AiFillYoutube} from 'react-icons/ai'
 import { useState } from 'react'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 export default function App (){
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   const pattern =   /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
   const [value, setValue] = useState("")
   const [errorState, setErrorState] = useState(false)
@@ -22,6 +43,20 @@ export default function App (){
     setShowMenu(false)
     setMenuIcon("/images/icon-hamburger.svg")
   })
+
+  
+const CustomDots = ({
+  index, 
+  onClick, 
+  active
+})=>{
+  return<>
+  <button onClick={e=>{
+    e.preventDefault()
+    onClick();
+  }} className={active ? 'active-dot':'dot'} />
+  </>
+}
 
   return<>
   <nav>
@@ -75,12 +110,13 @@ export default function App (){
           </ol>
         </div>
       </div>
-      <div className="section2-2">
-        <h1>What they've said</h1>
+<div className='section2-2'>
+<h1>What they've said</h1>
         <br />
-        <div className="testimonials">
-          <div className="test">
-            <img src="/images/avatar-anisha.png" alt="anisha" className='img' />
+        <br />
+<Carousel showDots={true} customDot={<CustomDots />}  removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive} className='section2-2-1'>
+<div className="test">
+   <img src="/images/avatar-anisha.png" alt="anisha" className='img' />
             <h4>Anisha Li</h4>
             <p>"Manage has supercharged our team's workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated."</p>
           </div>
@@ -99,10 +135,12 @@ export default function App (){
             <h4>Shanai Gough</h4>
             <p>"Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in sync without being intrusive."</p>
           </div>
-        </div>
-        <br />
-        <button>Get Started</button>
-      </div>
+</Carousel>
+<button className='button'>Get Started</button>
+</div>
+
+
+
     </div>
     <div className="section3">
       <h1>Simplify how your team works today.</h1>
