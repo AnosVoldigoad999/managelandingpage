@@ -23,7 +23,7 @@ export default function App (){
       breakpoint: { max: 464, min: 0 },
       items: 1
     }
-  };
+  };//some reactmulticarousel stuff
   const pattern =   /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
   const [value, setValue] = useState("")
   const [errorState, setErrorState] = useState(false)
