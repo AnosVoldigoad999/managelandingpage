@@ -6,6 +6,10 @@
 *{
   font-family: bev;
   box-sizing: border-box;
+
+}
+
+li, button{
   transition: 0.3s;
 }
 

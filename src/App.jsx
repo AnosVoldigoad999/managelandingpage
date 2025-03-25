@@ -2,6 +2,8 @@ import './App.css'
 import {BsTwitter, BsPinterest, BsInstagram} from 'react-icons/bs'
 import {AiFillFacebook, AiFillYoutube} from 'react-icons/ai'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { fromLeftToRight, fromRightToLeft, fromTopToBottom, fromBottomToTop, others } from './animations'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 export default function App (){
@@ -82,21 +84,41 @@ const CustomDots = ({
   </nav>
   <main>
     <div className="section1">
-      <div className="des">
+      <motion.div
+      initial={fromLeftToRight.initial}
+      animate={fromLeftToRight.animate}
+      transition={others.transition}
+      viewport={others.viewport}
+      className="des">
         <h1>Bring everyone together to build better products</h1>
         <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view </p>
         <br />
         <button>Get started</button>
-      </div>
-      <img src="/images/illustration-intro.svg" alt="illustration" className="illustration" />
+      </motion.div>
+      <motion.img
+      initial={fromRightToLeft.initial}
+      animate={fromRightToLeft.animate}
+      transition={others.transition}
+      viewport={others.viewport}
+       src="/images/illustration-intro.svg" alt="illustration" className="illustration" />
     </div>
     <div className="section2">
       <div className="section2-1">
-        <div className="des">
+        <motion.div
+        initial={fromBottomToTop.initial}
+        whileInView={fromBottomToTop.animate}
+        transition={others.transition}
+        viewport={others.viewport}
+        className="des">
           <h1>What's different about Manage?</h1>
           <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams</p>
-        </div>
-        <div className="list">
+        </motion.div>
+        <motion.div
+           initial={fromBottomToTop.initial}
+           whileInView={fromBottomToTop.animate}
+           transition={others.transition}
+           viewport={others.viewport}
+        className="list">
           <ol>
             <li><h4>Track company-wide progress</h4>
             <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
@@ -108,10 +130,15 @@ const CustomDots = ({
             <p>Stop jumping from one service to another to communicate. Store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
             </li>
           </ol>
-        </div>
+        </motion.div>
       </div>
 <div className='section2-2'>
-<h1>What they've said</h1>
+<motion.h1
+   initial={fromBottomToTop.initial}
+   whileInView={fromBottomToTop.animate}
+   transition={others.transition}
+   viewport={others.viewport}
+>What they've said</motion.h1>
         <br />
         <br />
 <Carousel showDots={true} customDot={<CustomDots />}  removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive} className='section2-2-1'>
@@ -142,10 +169,15 @@ const CustomDots = ({
 
 
     </div>
-    <div className="section3">
+    <motion.div 
+       initial={fromBottomToTop.initial}
+       whileInView={fromBottomToTop.animate}
+       transition={others.transition}
+       viewport={others.viewport}
+    className="section3">
       <h1>Simplify how your team works today.</h1>
     <button>Get started</button>
-    </div>
+    </motion.div>
     <footer>
       <div className="section4-1">
       <p>Copyright 2023. All Rights Reserved</p>
